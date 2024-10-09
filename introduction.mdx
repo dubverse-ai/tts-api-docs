@@ -66,45 +66,111 @@ Discover the power of Dubverse's AI voices for all your content creation needs.
     icon="code"
     href="https://dubverse.ai/docs/api-integration"
   >
-    Seamlessly integrate lifelike voices into chatbots, LLMs, apps, and websites
+    Seamlessly integrate lifelike voices into your apps, websites, and more
   </Card>
 </CardGroup>
 
-## Why Choose Dubverse
+<div className="api-section">
+  <h2>APIs that <span className="gradient-heading">move, scale, and adapt</span> to your code</h2>
+  <p>Dubverse offers developer-friendly APIs that allow seamless integration of lifelike voices into chatbots, LLMs, apps, websites, and more.</p>
+  <ul>
+    <li>Ultra-low latency model with response time under 500 ms</li>
+    <li>Advanced text comprehension for smarter responses</li>
+    <li>Detailed documentation for smooth integration</li>
+    <li>Consistent, on-brand voices across languages</li>
+    <li>Accurate pronunciation of numbers and dates</li>
+  </ul>
+  <a href="https://dubverse.ai/docs/api" className="elementor-button">
+    Explore API Documentation
+  </a>
+</div>
 
-<CardGroup cols={2}>
-  <Card
-    title="Powered by Advanced AI"
-    icon="robot"
-  >
-    Two AI models: Neo.One and Candy.Two for studio-grade audio quality
-  </Card>
-  <Card
-    title="Trusted by Creators"
-    icon="users"
-  >
-    5M+ voiceovers generated daily, trusted by 500K+ brands and 11M+ creators
-  </Card>
-</CardGroup>
-
-<div className="gradient_bg">
+<div className="gradient-bg">
   <p className="caveat">Experience the magic of Dubverse's AI voices today!</p>
-  <a href="https://dubverse.ai/signup" className="elementor-button elementor-button-link elementor-size-sm">
+  <a href="https://dubverse.ai/signup" className="elementor-button">
     Try Dubverse Now
   </a>
 </div>
 
 <style jsx>{`
-  .gradient_bg {
+  :root {
+    --color-primary: #8360FF;
+    --color-secondary: #BD00FF;
+    --color-tertiary: #0500FF;
+    --color-background: #0E0D12;
+    --color-text: #FFFFFF;
+    --color-heading: #C5B4FF;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: "Poppins", Sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Poppins", Sans-serif;
+    color: var(--color-heading);
+  }
+
+  .gradient-heading {
+    background-image: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+  }
+
+  .api-section {
+    background-color: var(--color-background);
+    background-image: url('https://dubverse.ai/wp-content/uploads/2024/10/Rectangle-18-1.png');
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+  }
+
+  .api-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .api-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .api-section ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .api-section ul li {
+    margin-bottom: 10px;
+    padding-left: 30px;
     position: relative;
-    padding: 20px;
+  }
+
+  .api-section ul li:before {
+    content: '✓';
+    color: var(--color-primary);
+    position: absolute;
+    left: 0;
+  }
+
+  .gradient-bg {
+    position: relative;
+    padding: 40px;
     border-radius: 10px;
     overflow: hidden;
+    margin-top: 40px;
   }
-  .gradient_bg:before {
+
+  .gradient-bg:before {
     content: '';
     opacity: 0.26;
-    background: radial-gradient(55.4% 59.08% at 50.84% 47.4%, #8360FF 7.82%, #BD00FF 45.12%, #0500FF 79.79%);
+    background: radial-gradient(55.4% 59.08% at 50.84% 47.4%, var(--color-primary) 7.82%, var(--color-secondary) 45.12%, var(--color-tertiary) 79.79%);
     filter: blur(132px); 
     height: 100%;
     width: 100%;
@@ -113,37 +179,33 @@ Discover the power of Dubverse's AI voices for all your content creation needs.
     left: 0;
     z-index: -1;
   }
+
   .caveat {
-    color: #BD00FF;
+    color: var(--color-secondary);
     font-family: "Caveat", Sans-serif;
     font-size: 24px;
     font-weight: 600;
   }
+
   .elementor-button {
     font-family: "Poppins", Sans-serif;
     font-size: 16px;
     font-weight: 500;
     fill: #FFFFFF;
     color: #FFFFFF;
-    background-color: #8360FF;
+    background-color: var(--color-primary);
     border-style: solid;
-    border-width: 1px 1px 1px 1px;
-    border-color: #8360FF;
-    border-radius: 6px 6px 6px 6px;
+    border-width: 1px;
+    border-color: var(--color-primary);
+    border-radius: 6px;
     padding: 15px 30px;
     text-decoration: none;
     display: inline-block;
     transition: all 0.3s ease;
   }
+
   .elementor-button:hover {
-    background-color: #BD00FF;
-    border-color: #BD00FF;
-  }
-  .gradient-heading {
-    color: #C5B4FF; 
-    background-image: linear-gradient(45deg, #C5B4FF 0%, #4024A3 100%); 
-    background-clip: text; 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
   }
 `}</style>
