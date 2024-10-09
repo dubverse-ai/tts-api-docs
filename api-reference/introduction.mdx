@@ -1,33 +1,72 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: 'Introduction to Dubverse AI API'
+description: 'Get started with the Dubverse AI Text-to-Speech API'
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+<img
+  className="block dark:hidden"
+  src="/images/api-intro-light.svg"
+  alt="API Introduction Light"
+/>
+<img
+  className="hidden dark:block"
+  src="/images/api-intro-dark.svg"
+  alt="API Introduction Dark"
+/>
 
-## Welcome
+## Welcome to Dubverse AI API
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+The Dubverse AI API provides powerful text-to-speech capabilities, allowing you to convert text into natural-sounding speech in multiple languages and voices. Our API is designed to be easy to use, highly customizable, and scalable for various applications.
+
+### Key Features
+
+<CardGroup cols={2}>
+  <Card
+    title="Multi-Language Support"
+    icon="globe"
+    iconType="duotone"
+  >
+    Access 200+ AI voices across 10+ Indian and global languages
+  </Card>
+  <Card
+    title="Ultra-Low Latency"
+    icon="bolt"
+    iconType="duotone"
+  >
+    Generate speech with response times as low as 500 ms
+  </Card>
+  <Card
+    title="Custom Voice Cloning"
+    icon="microphone"
+    iconType="duotone"
+  >
+    Create unique, branded voices for your applications
+  </Card>
+  <Card
+    title="Batch Processing"
+    icon="layer-group"
+    iconType="duotone"
+  >
+    Generate multiple audio files simultaneously for efficiency
+  </Card>
+</CardGroup>
+
+## Getting Started
+
+To start using the Dubverse AI API, follow these steps:
+
+1. Sign up for a Dubverse AI account
+2. Obtain your API key from the dashboard
+3. Choose an API endpoint based on your needs
+4. Make API requests using your preferred programming language
+
+For detailed information on authentication, error handling, and rate limits, please refer to the respective sections in our documentation.
 
 <Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
+  title="Ready to begin?"
+  icon="rocket"
+  iconType="duotone"
+  href="/api-reference/authentication"
 >
-  View the OpenAPI specification file
+  Learn how to authenticate your API requests
 </Card>
-
-## Authentication
-
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
-
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
-```
