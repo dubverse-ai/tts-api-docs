@@ -11,26 +11,32 @@ Welcome to the Dubverse TTS API documentation. This guide provides quick referen
 
 ### Endpoint
 
+```
 POST https://macaque.dubverse.ai/api/merlin/services/tts/text-to-speech
+```
 
 ### Headers
+
+```
 X-API-Key: YOUR_API_KEY_HERE
 Content-Type: application/json
+```
 
 ### Request Body
 
-json
+```json
 {
-"text": "Hello, welcome to Dubverse TTS!",
-"speaker": 181,
-"config": {
-"use_streaming_response": false
+  "text": "Hello, welcome to Dubverse TTS!",
+  "speaker": 181,
+  "config": {
+    "use_streaming_response": false
+  }
 }
-}
+```
 
 ### Sample cURL Request
 
-bash
+```bash
 curl -X POST "https://macaque.dubverse.ai/api/merlin/services/tts/text-to-speech" \
 -H "X-API-Key: YOUR_API_KEY_HERE" \
 -H "Content-Type: application/json" \
@@ -41,7 +47,7 @@ curl -X POST "https://macaque.dubverse.ai/api/merlin/services/tts/text-to-speech
 "use_streaming_response": false
 }
 }'
-
+```
 
 ## Key Features
 

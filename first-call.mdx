@@ -1,5 +1,5 @@
 ---
-title: 'Making Your First TTS API Call'
+title: 'Text-to-Speech API'
 description: 'Learn how to make your first Text-to-Speech API call with Dubverse'
 ---
 
@@ -18,41 +18,34 @@ Before you begin, ensure you have:
 
 ### HTTP Method
 
-POST
+<ParamField query="POST" type="string" required>
+  The HTTP method for the TTS API call.
+</ParamField>
 
 ### Endpoint URL
 
-https://macaque.dubverse.ai/api/merlin/services/tts/text-to-speech
+<ParamField query="https://macaque.dubverse.ai/api/merlin/services/tts/text-to-speech" type="string" required>
+  The endpoint URL for the TTS API.
+</ParamField>
 
 ### Headers
 
-X-API-Key: YOUR_API_KEY_HERE
-Content-Type: application/json
+<ParamField header="X-API-Key" type="string" required>
+  Your Dubverse API key.
+</ParamField>
 
-
-Replace `YOUR_API_KEY_HERE` with your actual Dubverse API key.
+<ParamField header="Content-Type" type="string" required>
+  application/json
+</ParamField>
 
 ### Request Body
-
-json
-{
-"text": "Hello, world! This is my first TTS API call.",
-"speaker": 181,
-"config": {
-"use_streaming_response": false
-},
-"callback_url": "https://your-callback-url.com/endpoint"
-}
-
-
-## Request Parameters Explained
 
 <ParamField body="text" type="string" required>
   The input text you want to convert to speech.
 </ParamField>
 
 <ParamField body="speaker" type="number" required>
-  The ID of the speaker voice. See [Speaker Selection](/speaker-selection) for available options.
+  The ID of the speaker voice.
 </ParamField>
 
 <ParamField body="config" type="object">
@@ -61,9 +54,6 @@ json
     <ParamField body="use_streaming_response" type="boolean">
       Set to `true` for streamed audio, `false` for a complete audio file response.
     </ParamField>
-    <ParamField body="sample_rate" type="number">
-      Specify the sample rate of the audio output. Minimum value is 8000 and maximum is 48000. The default rate is 22050.
-    </ParamField>
   </Expandable>
 </ParamField>
 
@@ -71,63 +61,6 @@ json
   URL to receive the API response if different from the origin.
 </ParamField>
 
-## Making the API Call
+## Sample Request
 
-You can use any HTTP client to make this API call. Here's an example using cURL:
-
-bash
-curl -X POST "https://macaque.dubverse.ai/api/merlin/services/tts/text-to-speech" \
--H "X-API-Key: YOUR_API_KEY_HERE" \
--H "Content-Type: application/json" \
--d '{
-"text": "Hello, world! This is my first TTS API call.",
-"speaker": 181,
-"config": {
-"use_streaming_response": false
-}
-}'
-
-# Understanding the Response
-
-### Success Response
-
-For non-streamed responses:
-- You'll receive a WAV file containing the synthesized speech.
-- The response will have a `Content-Type: audio/wav` header.
-
-For streamed responses:
-- You'll receive audio data in chunks.
-- The response will have a `Transfer-Encoding: chunked` header.
-
-### Error Response
-
-If an error occurs, you'll receive a JSON response with error details:
-json
-{
-"error": {
-"code": "ERROR_CODE",
-"message": "Description of the error"
-}
-}
-
-
-## Next Steps
-
-Now that you've made your first API call, you can:
-
-<CardGroup cols={2}>
-  <Card title="Speaker Selection" icon="microphone" href="/speaker-selection">
-    Learn more about choosing the right voice
-  </Card>
-  <Card title="Usage and Billing" icon="credit-card" href="/usage-billing">
-    Understand how to manage your usage and costs
-  </Card>
-</CardGroup>
-
-## Need Help?
-
-If you encounter any issues during your first API call:
-
-- Contact our support team at friends@dubverse.ai
-
-We're excited to see what you'll create with Dubverse TTS!
+<CodeGroup>
