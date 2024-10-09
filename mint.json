@@ -2,8 +2,8 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Dubverse AI",
   "logo": {
-    "dark": "/logo/dubverse-logo-dark.svg",
-    "light": "/logo/dubverse-logo-light.svg"
+    "dark": "/logo/dubverse_logo.png",
+    "light": "/logo/dubverse_logo-light.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
@@ -51,60 +51,3 @@
       "url": "https://dubverse.ai/blog"
     }
   ],
-  "navigation": [
-    {
-      "group": "Get Started",
-      "pages": [
-        "introduction",
-        "quickstart",
-        "api-integration"
-      ]
-    },
-    {
-      "group": "Features",
-      "pages": [
-        "features/multi-language-support",
-        "features/ultra-low-latency",
-        "features/mix-language-comprehension",
-        "features/custom-voice-cloning",
-        "features/batch-processing"
-      ]
-    },
-    {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction",
-        "api-reference/authentication",
-        "api-reference/error-handling"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/text-to-speech",
-        "api-reference/endpoint/voice-cloning",
-        "api-reference/endpoint/batch-processing"
-      ]
-    }
-  ],
-  "footerSocials": {
-    "twitter": "https://twitter.com/dubverse_ai",
-    "github": "https://github.com/dubverse",
-    "linkedin": "https://linkedin.com/company/dubverse",
-    "facebook": "https://www.facebook.com/dubverse"
-  },
-  "analytics": {
-    "ga4": {
-      "measurementId": "G-TB68TV06BH"
-    }
-  },
-  "feedback": {
-    "thumbsRating": true,
-    "suggestEdit": true
-  },
-  "modeToggle": {
-    "default": "dark",
-    "isHidden": false
-  },
-  "backgroundImage": "/images/background-pattern.png"
-}

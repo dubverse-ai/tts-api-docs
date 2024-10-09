@@ -1,211 +1,81 @@
 ---
-title: Experience AI Voices by Dubverse
-description: 'Welcome to the next generation of Text-to-Speech technology'
+title: 'Welcome to Dubverse TTS API'
+description: 'Get started with our Text-to-Speech API'
 ---
 
-<img
-  className="block dark:hidden"
-  src="/images/hero-light.svg"
-  alt="Dubverse AI Voices Light"
-/>
-<img
-  className="hidden dark:block"
-  src="/images/hero-dark.svg"
-  alt="Dubverse AI Voices Dark"
-/>
+# Welcome to Our Text-to-Speech (TTS) API Documentation
 
-## Ultra-Realistic AI Voices
+Welcome to the Dubverse TTS API documentation. This guide provides quick reference for experienced users and comprehensive information for new integrators.
 
-Dubverse offers next-generation Text-to-Speech (TTS) models with ultra-low latency, providing voices so real you won't know it's AI. Generate AI voiceovers for your projects that feel authentic and relatable in just minutes.
+## API Quick Reference
 
-<CardGroup cols={2}>
-  <Card
-    title="Multi-Language Support"
-    icon="globe"
-    href="https://dubverse.ai/docs/languages"
-  >
-    Choose from 200+ customizable AI voices across 10+ Indian and global languages
-  </Card>
-  <Card
-    title="Ultra-Low Latency"
-    icon="bolt"
-    href="https://dubverse.ai/docs/performance"
-  >
-    Experience lightning-fast voice generation with response times as low as 500 ms
-  </Card>
-</CardGroup>
+### Endpoint
+
+POST https://macaque.dubverse.ai/api/merlin/services/tts/text-to-speech
+
+### Headers
+X-API-Key: YOUR_API_KEY_HERE
+Content-Type: application/json
+
+### Request Body
+
+json
+{
+"text": "Hello, welcome to Dubverse TTS!",
+"speaker": 181,
+"config": {
+"use_streaming_response": false
+}
+}
+
+### Sample cURL Request
+
+bash
+curl -X POST "https://macaque.dubverse.ai/api/merlin/services/tts/text-to-speech" \
+-H "X-API-Key: YOUR_API_KEY_HERE" \
+-H "Content-Type: application/json" \
+-d '{
+"text": "Hello, welcome to Dubverse TTS!",
+"speaker": 181,
+"config": {
+"use_streaming_response": false
+}
+}'
+
 
 ## Key Features
 
-Discover the power of Dubverse's AI voices for all your content creation needs.
-
 <CardGroup cols={2}>
-  <Card
-    title="Mix-Language Comprehension"
-    icon="language"
-    href="https://dubverse.ai/docs/mix-language"
-  >
-    Generate voiceovers for scripts that mix languages—like Hinglish or Spanglish—in a single API call
+  <Card title="High-quality TTS" icon="waveform-lines">
+    Convert text to natural-sounding speech
   </Card>
-  <Card
-    title="Custom Voice Cloning"
-    icon="microphone"
-    href="https://dubverse.ai/docs/voice-cloning"
-  >
-    Create a branded voice that's authentic, recognizable, and uniquely yours
+  <Card title="Multiple Speakers" icon="users">
+    Choose from a variety of voice options
   </Card>
-  <Card
-    title="Batch Processing"
-    icon="layer-group"
-    href="https://dubverse.ai/docs/batch-processing"
-  >
-    Speed up production by generating multiple audio files simultaneously
+  <Card title="Customizable Parameters" icon="sliders">
+    Adjust speech parameters to your needs
   </Card>
-  <Card
-    title="API Integration"
-    icon="code"
-    href="https://dubverse.ai/docs/api-integration"
-  >
-    Seamlessly integrate lifelike voices into your apps, websites, and more
+  <Card title="Streaming Support" icon="tower-broadcast">
+    Get streamed or non-streamed audio output
   </Card>
 </CardGroup>
 
-<div className="api-section">
-  <h2>APIs that <span className="gradient-heading">move, scale, and adapt</span> to your code</h2>
-  <p>Dubverse offers developer-friendly APIs that allow seamless integration of lifelike voices into chatbots, LLMs, apps, websites, and more.</p>
-  <ul>
-    <li>Ultra-low latency model with response time under 500 ms</li>
-    <li>Advanced text comprehension for smarter responses</li>
-    <li>Detailed documentation for smooth integration</li>
-    <li>Consistent, on-brand voices across languages</li>
-    <li>Accurate pronunciation of numbers and dates</li>
-  </ul>
-  <a href="https://dubverse.ai/docs/api" className="elementor-button">
-    Explore API Documentation
-  </a>
-</div>
+## Quick Start Guide
 
-<div className="gradient-bg">
-  <p className="caveat">Experience the magic of Dubverse's AI voices today!</p>
-  <a href="https://dubverse.ai/signup" className="elementor-button">
-    Try Dubverse Now
-  </a>
-</div>
+<CardGroup cols={3}>
+  <Card title="Create Account" icon="user-plus" href="/account-creation">
+    Set up your Dubverse account
+  </Card>
+  <Card title="Get API Key" icon="key" href="/api-key">
+    Obtain your API credentials
+  </Card>
+  <Card title="First API Call" icon="code" href="/first-call">
+    Make your first TTS request
+  </Card>
+</CardGroup>
 
-<style jsx>{`
-  :root {
-    --color-primary: #8360FF;
-    --color-secondary: #BD00FF;
-    --color-tertiary: #0500FF;
-    --color-background: #0E0D12;
-    --color-text: #FFFFFF;
-    --color-heading: #C5B4FF;
-  }
+## Need Help?
 
-  body {
-    background-color: var(--color-background);
-    color: var(--color-text);
-    font-family: "Poppins", Sans-serif;
-  }
+If you need assistance or have any questions, please don't hesitate to contact our support team at friends@dubverse.ai.
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: "Poppins", Sans-serif;
-    color: var(--color-heading);
-  }
-
-  .gradient-heading {
-    background-image: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    display: inline-block;
-  }
-
-  .api-section {
-    background-color: var(--color-background);
-    background-image: url('https://dubverse.ai/wp-content/uploads/2024/10/Rectangle-18-1.png');
-    background-size: cover;
-    background-position: center;
-    padding: 40px;
-    border-radius: 10px;
-    margin-top: 40px;
-  }
-
-  .api-section h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-
-  .api-section p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-
-  .api-section ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-
-  .api-section ul li {
-    margin-bottom: 10px;
-    padding-left: 30px;
-    position: relative;
-  }
-
-  .api-section ul li:before {
-    content: '✓';
-    color: var(--color-primary);
-    position: absolute;
-    left: 0;
-  }
-
-  .gradient-bg {
-    position: relative;
-    padding: 40px;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: 40px;
-  }
-
-  .gradient-bg:before {
-    content: '';
-    opacity: 0.26;
-    background: radial-gradient(55.4% 59.08% at 50.84% 47.4%, var(--color-primary) 7.82%, var(--color-secondary) 45.12%, var(--color-tertiary) 79.79%);
-    filter: blur(132px); 
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-
-  .caveat {
-    color: var(--color-secondary);
-    font-family: "Caveat", Sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-  }
-
-  .elementor-button {
-    font-family: "Poppins", Sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    fill: #FFFFFF;
-    color: #FFFFFF;
-    background-color: var(--color-primary);
-    border-style: solid;
-    border-width: 1px;
-    border-color: var(--color-primary);
-    border-radius: 6px;
-    padding: 15px 30px;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.3s ease;
-  }
-
-  .elementor-button:hover {
-    background-color: var(--color-secondary);
-    border-color: var(--color-secondary);
-  }
-`}</style>
+Thank you for choosing our TTS API. We're excited to see what you'll create!
