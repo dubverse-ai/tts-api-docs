@@ -51,3 +51,28 @@
       "url": "https://dubverse.ai/blog"
     }
   ],
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "introduction",
+        "account-creation",
+        "api-key",
+        "first-call"
+      ]
+    },
+    {
+      "group": "API Reference",
+      "pages": [
+        "api-reference/text-to-speech",
+        "api-reference/speaker-selection",
+        "api-reference/usage-billing"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "twitter": "https://twitter.com/dubverseai",
+    "github": "https://github.com/dubverse",
+    "linkedin": "https://www.linkedin.com/company/dubverse"
+  }
+}
