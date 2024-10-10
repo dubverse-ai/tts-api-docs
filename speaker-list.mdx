@@ -3,73 +3,13 @@ title: 'Speaker List'
 description: 'Comprehensive list of available speakers for Dubverse TTS API'
 ---
 
+import { SpeakerList } from '../components/SpeakerList';
+
 # Speaker List
 
-Dubverse offers a wide range of speakers across multiple languages for both our candy.two (maha_tts) and neo.one (talknet) models. Below is a comprehensive list of available speakers categorized by language and model type.
+Dubverse offers a wide range of speakers across multiple languages for both our candy.two (maha_tts) and neo.one (talknet) models. Below is a comprehensive list of available speakers:
 
-## candy.two (maha_tts) Speakers
-
-### English
-
-| Speaker | Gender | Country | Sample |
-|---------|--------|---------|--------|
-| Jenny | Female | United States | <audio controls src="https://dubverse-public-assets.s3.ap-south-1.amazonaws.com/audio/English/azure_tts_Jenny.wav"></audio> |
-| Abhilash | Male | India | <audio controls src="https://dubverse-public-assets.s3.ap-south-1.amazonaws.com/audio/English/azure_tts_Abhilash.wav"></audio> |
-| Liam | Male | Canada | <audio controls src="https://dubverse-public-assets.s3.ap-south-1.amazonaws.com/audio/English/azure_tts_Liam.wav"></audio> |
-
-### Arabic
-
-| Speaker | Gender | Country | Sample |
-|---------|--------|---------|--------|
-| Noura | Female | United Arab Emirates | <audio controls src="https://dubverse-public-assets.s3.ap-south-1.amazonaws.com/audio/Arabic/azure_ar-AE-FatimaNeural_default.wav"></audio> |
-| Khalid | Male | United Arab Emirates | <audio controls src="https://dubverse-public-assets.s3.ap-south-1.amazonaws.com/audio/Arabic/azure_ar-AE-HamdanNeural_default.wav"></audio> |
-| Sara | Female | Saudi Arabia | <audio controls src="https://dubverse-public-assets.s3.ap-south-1.amazonaws.com/audio/Arabic/google_ar-XA-Standard-A.wav"></audio> |
-
-### Bengali
-
-| Speaker | Gender | Country | Sample |
-|---------|--------|---------|--------|
-| Tamanna | Female | Bangladesh | <audio controls src="https://dubverse-public-assets.s3.ap-south-1.amazonaws.com/audio/Bengali/azure_bn-BD-NabanitaNeural_default.wav"></audio> |
-| Sohail | Male | Bangladesh | <audio controls src="https://dubverse-public-assets.s3.ap-south-1.amazonaws.com/audio/Bengali/azure_bn-BD-PradeepNeural2_default.wav"></audio> |
-| Sahana | Female | India | <audio controls src="https://dubverse-public-assets.s3.ap-south-1.amazonaws.com/audio/Bengali/azure_bn-IN-TanishaaNeural2_default.wav"></audio> |
-
-### Hindi
-
-| Speaker | Gender | Country | Sample |
-|---------|--------|---------|--------|
-| Shaan (Dubverse) | Male | India | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speakers_static/Hindi/talknet_tts_shaan.wav"></audio> |
-| Charu-Bhashini | Female | India | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speakers_static/ElevenLabs/Ira_Hindi.wav"></audio> |
-| Ajay-Bhashini | Male | India | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speakers_static/ElevenLabs/Ira_Hindi.wav"></audio> |
-
-### German
-
-| Speaker | Gender | Country | Sample |
-|---------|--------|---------|--------|
-| Paul | Male | Germany | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speakers_static/Maha_tts%20speakers/German%20Male.wav"></audio> |
-| Charlotte-Elevenlabs | Female | Germany | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speakers_static/ElevenLabs/Charlotte-Elevenlabs_German.wav"></audio> |
-
-## neo.one (talknet) Speakers
-
-### Assamese
-
-| Speaker | Gender | Country | Sample |
-|---------|--------|---------|--------|
-| Shaan (Dubverse) | Male | India | <audio controls src="https://s3-ap-south-1.amazonaws.com/dubverse-webapp/speakers_static/Assamese/talknet_tts_shaan.wav"></audio> |
-| Sunidhi (Dubverse) | Female | India | <audio controls src="https://s3-ap-south-1.amazonaws.com/dubverse-webapp/speakers_static/Assamese/talknet_tts_sunidhi.wav"></audio> |
-
-### Malayalam
-
-| Speaker | Gender | Country | Sample |
-|---------|--------|---------|--------|
-| Gadhadhar | Male | India | <audio controls src="https://s3-ap-south-1.amazonaws.com/dubverse-webapp/speakers_static/Malayalam/google_tts_Gadhadhar.wav"></audio> |
-| Priya | Female | India | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speakers_static/Maha_tts%20speakers/Malayalam%20female%20new.wav"></audio> |
-
-### Rajasthani
-
-| Speaker | Gender | Country | Sample |
-|---------|--------|---------|--------|
-| Pratap | Male | India | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speakers_static/Maha_tts%20speakers/Rajasthani%20Male.wav"></audio> |
-| Rani | Female | India | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speakers_static/Maha_tts%20speakers/Rajasthani%20Female.wav"></audio> |
+<SpeakerList />
 
 ## Using Speakers in API Calls
 
@@ -90,35 +30,3 @@ For more information on how to select and implement speakers in your projects, p
 ## Need a Custom Voice?
 
 If you need a specific voice or language that's not listed here, please contact our support team at friends@dubverse.ai to discuss custom voice options.
-
-import { useState, useEffect } from 'react';
-
-export const SpeakerList = () => {
-  const [speakers, setSpeakers] = useState([]);
-
-  useEffect(() => {
-    fetch('https://poopy.dubverse.ai/api/v3/data/speakers/')
-      .then(response => response.json())
-      .then(data => setSpeakers(data))
-      .catch(error => console.error('Error fetching speakers:', error));
-  }, []);
-
-  return (
-    <div>
-      <h2>Available Speakers</h2>
-      <ul>
-        {speakers.map(speaker => (
-          <li key={speaker.id}>
-            <strong>{speaker.name}</strong> ({speaker.gender}) - {speaker.language}
-            <br />
-            Speaker No: {speaker.speaker_no}, Type: {speaker.type}
-            <br />
-            Description: {speaker.description}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-<SpeakerList />
