@@ -69,6 +69,34 @@
         "api-reference/speaker-selection",
         "api-reference/usage-billing"
       ]
+    },
+    {
+      "group": "Models",
+      "pages": [
+        "models/neo-one",
+        "models/candy-two",
+        "models/comparison"
+      ]
+    },
+    {
+      "group": "Features",
+      "pages": [
+        "speaker-list",
+        "voice-quality",
+        "dubverse-vs-competitors",
+        "technical-details",
+        "voice-cloning"
+      ]
+    },
+    {
+      "group": "Resources",
+      "pages": [
+        "integration-guides",
+        "pricing",
+        "product-roadmap",
+        "support",
+        "legal"
+      ]
     }
   ],
   "footerSocials": {
