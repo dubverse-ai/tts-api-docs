@@ -72,11 +72,7 @@
     },
     {
       "group": "Models",
-      "pages": [
-        "models/neo-one",
-        "models/candy-two",
-        "models/comparison"
-      ]
+      "pages": ["models/overview"]
     },
     {
       "group": "Features",
