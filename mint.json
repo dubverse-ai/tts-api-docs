@@ -5,7 +5,7 @@
     "dark": "/logo/dubverse_logo.png",
     "light": "/logo/dubverse_logo-light.svg"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/dubverse_logo.png",
   "colors": {
     "primary": "#8360FF",
     "light": "#C5B4FF",
@@ -26,7 +26,7 @@
   ],
   "topbarCtaButton": {
     "name": "Get Started",
-    "url": "https://dubverse.ai/signup"
+    "url": " https://webapp.dubverse.ai/services/tts"
   },
   "tabs": [
     {
@@ -38,17 +38,12 @@
     {
       "name": "Documentation",
       "icon": "book-open-cover",
-      "url": "https://dubverse.ai/docs"
+      "url": "https://docs.dubverse.ai/"
     },
     {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://dubverse.ai/community"
-    },
-    {
-      "name": "Blog",
+      "name": "Tech Blog",
       "icon": "newspaper",
-      "url": "https://dubverse.ai/blog"
+      "url": "https://black.dubverse.ai"
     }
   ],
   "navigation": [
