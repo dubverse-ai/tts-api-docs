@@ -4,29 +4,4 @@ description: 'Comprehensive list of available speakers for Dubverse TTS API'
 ---
 
 import { SpeakerList } from '../components/SpeakerList';
-
-# Speaker List
-
-Dubverse offers a wide range of speakers across multiple languages for both our candy.two (maha_tts) and neo.one (talknet) models. Below is a comprehensive list of available speakers:
-
-<SpeakerList />
-
-## Using Speakers in API Calls
-
-To use a specific speaker in your API call, include the `speaker_no` in your request body. For example:
-
-```json
-{
-  "text": "Hello, welcome to Dubverse TTS!",
-  "speaker_no": 251,
-  "config": {
-    "use_streaming_response": false
-  }
-}
-```
-
-For more information on how to select and implement speakers in your projects, please refer to our [Speaker Selection Guide](/api-reference/speaker-selection).
-
-## Need a Custom Voice?
-
-If you need a specific voice or language that's not listed here, please contact our support team at friends@dubverse.ai to discuss custom voice options.
+import '../styles/SpeakerList.css';
