@@ -1,0 +1,74 @@
+---
+title: 'Speaker List'
+description: 'Comprehensive list of available speakers for Dubverse TTS API'
+---
+
+# Speaker List
+
+Dubverse offers a wide range of speakers across multiple languages for both our candy.two (maha_tts) and neo.one (talknet) models. Below is a comprehensive list of available speakers categorized by language and model type.
+
+## candy.two (maha_tts) Speakers
+
+### English
+- Jenny (United States) - Female
+  - [Preview](https://s3-ap-south-1.amazonaws.com/dubverse-webapp/speakers_static/English/azure_tts_Jenny.wav)
+- Abhilash (India) - Male
+  - [Preview](https://s3-ap-south-1.amazonaws.com/dubverse-webapp/speakers_static/English/azure_tts_Abhilash.wav)
+- Liam (Canada) - Male
+  - [Preview](https://s3-ap-south-1.amazonaws.com/dubverse-webapp/speakers_static/English/azure_tts_Liam.wav)
+
+### Arabic
+- Noura (United Arab Emirates) - Female
+  - [Preview](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speakers_static/Speaker_Styles/azure_ar-AE-FatimaNeural_default.wav)
+- Khalid (United Arab Emirates) - Male
+  - [Preview](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speakers_static/Speaker_Styles/azure_ar-AE-HamdanNeural_default.wav)
+- Sara (Saudi Arabia) - Female
+  - [Preview](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speakers_static/Speaker_Styles/google_ar-XA-Standard-A.wav)
+
+### Bengali
+- Tamanna (Bangladesh) - Female
+  - [Preview](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speakers_static/Speaker_Styles/azure_bn-BD-NabanitaNeural2_default.wav)
+- Sohail (Bangladesh) - Male
+  - [Preview](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speakers_static/Speaker_Styles/azure_bn-BD-PradeepNeural2_default.wav)
+- Sahana (India) - Female
+  - [Preview](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speakers_static/Speaker_Styles/azure_bn-IN-TanishaaNeural2_default.wav)
+- Aniket (India) - Male
+  - [Preview](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speakers_static/Speaker_Styles/azure_bn-IN-BashkarNeural2_default.wav)
+
+### French
+- Ariane (Switzerland) - Female
+  - [Preview](https://s3-ap-south-1.amazonaws.com/dubverse-webapp/speakers_static/French/azure_tts_Ariane.wav)
+
+### Chinese
+- Wei (Cantonese) - Female
+  - [Preview](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speakers_static/Speaker_Styles/azure_yue-CN-XiaoMinNeural1,2_default.wav)
+- Wei (Cantonese) - Male
+  - [Preview](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speakers_static/Speaker_Styles/azure_yue-CN-YunSongNeural1,2_default.wav)
+- Yujie (Hong Kong) - Female
+  - [Preview](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speakers_static/Speaker_Styles/azure_zh-HK-HiuMaanNeural_default.wav)
+- Yaqing (Hong Kong) - Female
+  - [Preview](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speakers_static/Speaker_Styles/azure_zh-HK-HiuGaaiNeural_default.wav)
+
+## neo.one (talknet) Speakers
+
+[List neo.one speakers here, following the same format as above]
+
+## Using Speakers in API Calls
+
+To use a specific speaker in your API call, include the `speaker_no` in your request body. For example:
+
+```json
+{
+  "text": "Hello, welcome to Dubverse TTS!",
+  "speaker_no": 251,
+  "config": {
+    "use_streaming_response": false
+  }
+}
+```
+
+For more information on how to select and implement speakers in your projects, please refer to our [Speaker Selection Guide](/api-reference/speaker-selection).
+
+## Need a Custom Voice?
+
+If you need a specific voice or language that's not listed here, please contact our support team at friends@dubverse.ai to discuss custom voice options.
