@@ -28,12 +28,14 @@
     "name": "Get Started",
     "url": " https://webapp.dubverse.ai/services/tts"
   },
-  "anchors": [
+  "tabs": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://docs.dubverse.ai/"
-    },
+      "name": "API Reference",
+      "url": "api-reference",
+      "openapi": "https://mahatts-assets-new.s3.ap-south-1.amazonaws.com/openapi.json"
+    }
+  ],
+  "anchors": [
     {
       "name": "Tech Blog",
       "icon": "newspaper",
@@ -43,13 +45,7 @@
   "navigation": [
     {
       "group": "Getting Started",
-      "pages": [
-        "introduction",
-        "account-creation",
-        "api-key",
-        "first-call",
-        "usage-billing"
-      ]
+      "pages": ["introduction", "account-creation", "api-key", "usage-billing"]
     },
     {
       "group": "Models",
@@ -58,8 +54,13 @@
     {
       "group": "Features",
       "pages": ["speaker-list", "dubverse-vs-others"]
+    },
+    {
+      "group": "API References",
+      "pages": ["api-references/text-to-speech"]
     }
   ],
+  "openapi": "https://mahatts-assets-new.s3.ap-south-1.amazonaws.com/openapi.json",
   "footerSocials": {
     "twitter": "https://twitter.com/dubverseai",
     "github": "https://github.com/dubverse",
