@@ -3,7 +3,7 @@
   "name": "Dubverse AI",
   "logo": {
     "dark": "/logo/dubverse_logo.png",
-    "light": "/logo/dubverse_logo-light.svg"
+    "light": "/logo/dubverse_logo.png"
   },
   "favicon": "/dubverse_logo.png",
   "colors": {
@@ -21,19 +21,13 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@dubverse.ai"
+      "url": "mailto:friends@dubverse.ai"
     }
   ],
   "topbarCtaButton": {
     "name": "Get Started",
     "url": " https://webapp.dubverse.ai/services/tts"
   },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
   "anchors": [
     {
       "name": "Documentation",
@@ -58,41 +52,20 @@
       ]
     },
     {
-      "group": "API Reference",
-      "pages": [
-        "api-reference/text-to-speech",
-        "api-reference/speaker-selection",
-        "api-reference/usage-billing"
-      ]
-    },
-    {
       "group": "Models",
       "pages": ["models/overview"]
     },
     {
       "group": "Features",
-      "pages": [
-        "speaker-list",
-        "voice-quality",
-        "dubverse-vs-others",
-        "technical-details",
-        "voice-cloning"
-      ]
-    },
-    {
-      "group": "Resources",
-      "pages": [
-        "integration-guides",
-        "pricing",
-        "product-roadmap",
-        "support",
-        "legal"
-      ]
+      "pages": ["speaker-list", "dubverse-vs-others"]
     }
   ],
   "footerSocials": {
     "twitter": "https://twitter.com/dubverseai",
     "github": "https://github.com/dubverse",
     "linkedin": "https://www.linkedin.com/company/dubverse"
+  },
+  "seo": {
+    "indexHiddenPages": true
   }
 }

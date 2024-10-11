@@ -2,29 +2,31 @@
 
 This document provides a detailed comparison of Dubverse with other Text-to-Speech (TTS) providers, including audio samples and specific observations.
 
+import { AudioComparison } from "/snippets/audioComparison.mdx";
+import { EnglishAudioComparison } from "/snippets/englishAudioComparison.mdx";
+
 ### English
 
-## Comparison Table
 
-| Sentence | Dubverse | ElevenLabs | XTTS | Sarvam | Bhashini AI4Bharat | Bhashini IITM | Cartesia | PlayHT | MicMonster |
-|----------|----------|------------|------|--------|-------------------|---------------|----------|--------|------------|
-| पीली पपलियों पर पल पल पीपल के पेड़ के नीचे पीतल का पीला पपीहा पीली पत्तियों पर पंख फड़फड़ाता है। | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/shaan_sentence1_20241004055028.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/ElevenLabs_2024-09-28T10_28_12_Aakash Aryan - Conversational Voice_pvc_s36_sb75_se0_b_m2.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/output_audio (9).wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/sarvam_samples_1.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/download.mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/download (5).mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/cartesia_audio_2024-10-04T00_19_36+05_30.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/1c25de8be40641f5b150aa60b8f4bd04.mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/hi-IN-MadhurNeural.mp3"></audio> |
-| राजा रानी रोज रात को रोटी रोज़ी रोज़गार में रमी रहती हैं, रतन रोटियां रोल करता, रोज रोज राजीव राजा से रिश्ते रखता। | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/shaan_sentence2_20241004055114.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/ElevenLabs_2024-09-28T10_25_36_Aakash Aryan - Conversational Voice_pvc_s36_sb75_se0_b_m2.mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/output_audio (11).wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/sarvam_samples_2.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/download (1).mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/download (6).mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/cartesia_audio_2024-10-04T00_19_53+05_30.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/93bdb7b187724cbdadb9eb39d883c8cb.mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/hi-IN-MadhurNeural (1).mp3"></audio> |
-| कड़कड़ाती धूप में कड़कती धरती के किनारे कड़क चाय पीकर कड़क मिजाज वाले कड़कनाथ कड़कड़ी सड़क पर कड़कते हुए चले। | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/shaan_sentence3_20241004055208.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/ElevenLabs_2024-09-28T10_26_20_Aakash Aryan - Conversational Voice_pvc_s36_sb75_se0_b_m2.mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/output_audio (13).wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/sarvam_samples_3.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/download (2).mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/download (7).mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/cartesia_audio_2024-10-04T00_20_25+05_30.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/4d787836a45a40ec8d8b85f6effb233f.mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/hi-IN-MadhurNeural (2).mp3"></audio> |
-| तपते तंदूर में तंदूरी तंदूरी टिक्के तपते तपते टूटे, टूटते तंदूरी टिक्कों को तवों पर तपाकर टेस्टी तंदूरी खाना तैयार होता। | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/shaan_sentence4_20241004055300.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/ElevenLabs_2024-09-28T10_28_08_Aakash Aryan - Conversational Voice_pvc_s36_sb75_se0_b_m2.mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/output_audio (12).wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/sarvam_samples_4.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/download (3).mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/download (8).mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/cartesia_audio_2024-10-04T00_20_42+05_30.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/5014e441f67640b5bacf7efa087bdbec.mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/hi-IN-MadhurNeural (3).mp3"></audio> |
-| फूल फेंकते-फेंकते फ़कीर फूले नहीं समाए, फटी-फटी फ़कीरी में फूटी किस्मत भी फिसल गई। | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/shaan_sentence5_20241004055355.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/ElevenLabs_2024-10-04T06_05_36_Aakash Aryan - Conversational Voice_pvc_s36_sb75_se0_b_m2.mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/output_audio (14).wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/sarvam_samples_5.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/download (4).mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/download (9).mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/cartesia_audio_2024-10-04T00_21_23+05_30.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/3907e1ee71d14adc889a0fdb0dc790bf.mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/hi-IN-MadhurNeural (4).mp3"></audio> |
+
+# Audio Comparison
+
+<AudioComparison />
 
 ## Observations
 
 ### Dubverse
+
 [Add observations about Dubverse's performance]
 
 ### ElevenLabs
+
 - Mispronunciation of "रानी, रतन"
 - Slow speed
 - [Add more observations]
 
 ### XTTS
+
 - Mispronunciation of "कड़कड़ाती, कड़कड़ी, टेस्टी"
 - Stuttering in the last line
 - Speed is fine
@@ -32,6 +34,7 @@ This document provides a detailed comparison of Dubverse with other Text-to-Spee
 - [Add more observations]
 
 ### Sarvam
+
 - Mispronunciation of "फटी-फटी"
 - Glitchy audio quality
 - Number issue (missed one digit)
@@ -39,6 +42,7 @@ This document provides a detailed comparison of Dubverse with other Text-to-Spee
 - [Add more observations]
 
 ### Bhashini AI4Bharat
+
 - Unclear pronunciation of "कड़क"
 - Mispronunciation of "फ़कीर"
 - Poor audio quality
@@ -47,6 +51,7 @@ This document provides a detailed comparison of Dubverse with other Text-to-Spee
 - [Add more observations]
 
 ### Bhashini IITM
+
 - Fumbling on "समाए"
 - Fast audio
 - Unclear pronunciation of "कड़कड़ी"
@@ -54,6 +59,7 @@ This document provides a detailed comparison of Dubverse with other Text-to-Spee
 - [Add more observations]
 
 ### Cartesia
+
 - Some missing words and mispronunciations
 - Fast speed
 - Stuttering
@@ -63,34 +69,23 @@ This document provides a detailed comparison of Dubverse with other Text-to-Spee
 - [Add more observations]
 
 ### PlayHT
+
 - Slow speed
 - Lacks emotions
 - [Add more observations]
 
 ### MicMonster
+
 - Sounds electronic
 - Doesn't seem human
 - [Add more observations]
 
 ## English Sentences Comparison
 
-<audio controls>
-  <source src="https://s3-ap-south-1.amazonaws.com/dubverse-webapp/speakers_static/English/azure_tts_Jenny.wav" type="audio/mpeg" />
-  Your browser does not support the audio element.
-</audio>
-
-<audio controls>
-  <source src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/ElevenLabs_2024-10-07T10_16_20_Charlotte_pre_s50_sb75_se0_b_m2.mp3" type="audio/mpeg" />
-  Your browser does not support the audio element.
-</audio>
-
-| Sentence | Dubverse | ElevenLabs | XTTS | Cartesia | PlayHT | MicMonster |
-|----------|----------|------------|------|----------|--------|------------|
-| What can be done to be here for what is needed? | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/English-What can be.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/ElevenLabs_2024-10-07T07_13_23_Bill_pre_s50_sb75_se0_b_m2.mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/_tmp_gradio_1c4f9c9e8ccb98caf234ca3126734d18854f555a_output.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/cartesia_audio_2024-10-07T13_18_59+05_30.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/7a142041f86749e0a02d33337bc9a7b6.mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/en-US-AndrewNeural.mp3"></audio> |
-| Hey? How are you? | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/English-What can be (1).wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/ElevenLabs_2024-10-07T07_14_19_Bill_pre_s50_sb75_se0_b_m2.mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/_tmp_gradio_333923bc6b1cbe4eba43d814d1db0df20fd31105_output.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/cartesia_audio_2024-10-07T13_19_19+05_30.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/1efb59bf753a461991c664e4faacb458.mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/en-US-AndrewNeural (1).mp3"></audio> |
-| Hey? Is everything okay? | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/English-What can be (2).wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/ElevenLabs_2024-10-07T07_15_04_Bill_pre_s50_sb75_se0_b_m2.mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/_tmp_gradio_d94f1617a027dec9ffe59dca82f50878e738a038_output.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/cartesia_audio_2024-10-07T13_19_39+05_30.wav"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/dd8e06484f834b2a8887e91d23d45e05.mp3"></audio> | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/en-US-AndrewNeural (2).mp3"></audio> |
+<EnglishAudioComparison />
 
 ### Additional Observations for English Sentences
+
 - ElevenLabs: Hallucination for short sentences
 - XTTS: Lot of noise and bad audio quality
 - Cartesia: Sounds robotic and pronounces "hey" as "hi"
@@ -100,12 +95,13 @@ This document provides a detailed comparison of Dubverse with other Text-to-Spee
 
 ## Emotional Sentences (ElevenLabs)
 
-| Sentence | Audio |
-|----------|-------|
-| I can't believe it! This is amazing! | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/ElevenLabs_2024-10-07T10_16_20_Charlotte_pre_s50_sb75_se0_b_m2.mp3"></audio> |
-| Oh my gosh, did you see that? | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/ElevenLabs_2024-10-07T10_16_20_Charlotte_pre_s50_sb75_se0_b_m2 (1).mp3"></audio> |
+| Sentence                             | Audio                                                                                                                                                                        |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| I can't believe it! This is amazing! | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/ElevenLabs_2024-10-07T10_16_20_Charlotte_pre_s50_sb75_se0_b_m2.mp3"></audio>     |
+| Oh my gosh, did you see that?        | <audio controls src="https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/ElevenLabs_2024-10-07T10_16_20_Charlotte_pre_s50_sb75_se0_b_m2 (1).mp3"></audio> |
 
 ### Observation
+
 - High pitch issue in ElevenLabs, especially for female voices
 
 ## Conclusion
