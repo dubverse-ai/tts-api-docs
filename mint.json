@@ -45,12 +45,18 @@
   "navigation": [
     {
       "group": "Getting Started",
+      "icon": "rocket",
       "pages": ["introduction", "account-creation", "api-key", "usage-billing"]
     },
     {
       "group": "Models & Speakers",
+      "icon": "microphone-stand",
       "pages": [
-        "models/overview",
+        {
+          "group": "Models",
+          "icon": "cube",
+          "pages": ["models/overview"]
+        },
         {
           "group": "Speakers",
           "icon": "microphone",
@@ -72,10 +78,12 @@
     },
     {
       "group": "Evals",
+      "icon": "chart-bar",
       "pages": ["dubverse-vs-others"]
     },
     {
       "group": "API References",
+      "icon": "code",
       "pages": ["api-references/text-to-speech"]
     }
   ],
