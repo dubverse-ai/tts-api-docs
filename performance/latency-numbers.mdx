@@ -1,16 +1,15 @@
 ---
-title: "Neo.One Model Latency Performance"
-description: "An in-depth look at the latency metrics and performance features of Dubverse's Neo.One TTS model"
+title: "Latency Performance"
 icon: "chart-simple"
 ---
 
-# Neo.One Model Latency Performance
+# neo.one Model Latency Performance
 
-Dubverse's Neo.One model demonstrates exceptional performance in Text-to-Speech (TTS) generation, offering a balance of speed and quality comparable to industry-leading neural voice models. Here's a detailed breakdown of its latency metrics and key features.
+Dubverse's neo.one model demonstrates exceptional performance in Text-to-Speech (TTS) generation, offering a balance of speed and quality comparable to industry-leading neural voice models. Here's a detailed breakdown of its latency metrics and key features.
 
 ## Understanding TTS Latency
 
-In the context of TTS technology, latency refers to the delay between receiving the input text and generating the audio output. It's crucial to measure and optimize various components of latency for the best user experience.
+In the context of TTS technology, latency refers to the delay between receiving the input text and generating the audio output. It's crucial to measure and optimize various com.onents of latency for the best user experience.
 
 ### Components of Latency
 
@@ -22,62 +21,66 @@ In the context of TTS technology, latency refers to the delay between receiving 
   The latency for the first couple of requests might be higher due to cold start times. Subsequent requests will typically show improved performance.
 </Warning>
 
-## Neo.One Latency Metrics
+## neo.one Latency Metrics
 
 ### Characters per Second
-- **Neo.One:** 276.13 (average)
+- **neo.one:** 276.13 (average)
 - **Industry Comparison:**
   - Amazon Polly (Neural): 459
   - LMNT: 337
   - Microsoft Azure (Neural): 292
   - Google Cloud TTS (Studio): 287
 
-While slightly lower than some competitors, Neo.One prioritizes a balance between speed and high-quality output.
-
 ### Speed Factor
-- **Neo.One:** 23.80x (average)
+- **neo.one:** 23.80x (average)
 - **Industry Comparison:**
   - Amazon Polly (Neural): 27.52
   - LMNT: 20.49
   - Google Cloud TTS (Studio): 17.23
   - Microsoft Azure (Neural): 17.02
+  - Cartesia: 6.9x
 
-Neo.One's speed factor is highly competitive, outperforming Microsoft Azure's Neural model and Google's Studio model.
+neo.one's speed factor is highly competitive, outperforming most industry leaders including Cartesia.
+
+<Note>
+  These metrics are based on the report published by Artificial Analysis on October 17, 2024. For the full comparison, visit [Artificial Analysis TTS Comparison](https://artificialanalysis.ai/text-to-speech).
+</Note>
+
+<img src="/images/speed_factor.png" />
 
 ### Time to First Byte (TTFB)
-- **Neo.One:** 193.33 ms (average)
-
-This low TTFB indicates rapid initial response times, crucial for responsive applications.
+- **neo.one:** 193.33 ms (average)
 
 ### Overall Latency
-- **Neo.One:** 695.17 ms (average)
-
-Our overall latency is remarkably low, ensuring quick turnaround for TTS requests.
+- **neo.one:** 695.17 ms (average)
 
 ## Key Features for Optimizing Latency
 
 ### Streaming Support
 
-Neo.One supports audio streaming, allowing you to begin playback as soon as the first audio chunk is received. This significantly reduces perceived latency, especially for longer texts.
+neo.one supports audio streaming, allowing you to begin playback as soon as the first audio chunk is received. This significantly reduces perceived latency, especially for longer texts.
 
 Example of streaming implementation:
-python
+```python
 def get_stream(url, load, headers=None):
-s = requests.Session()
-start_time = time.time()
-ttfb = None
-total_bytes = 0
-with s.post(url, json=load, headers=headers, stream=True) as resp:
-for data in resp.iter_content(chunk_size=10248):
-if ttfb is None:
-ttfb = time.time() - start_time
-total_bytes += len(data)
-yield data, time.time() - start_time
-return ttfb, total_bytes
+    s = requests.Session()
+    start_time = time.time()
+    ttfb = None
+    total_bytes = 0
+    
+    with s.post(url, json=load, headers=headers, stream=True) as resp:
+        for data in resp.iter_content(chunk_size=1024*8):
+            if ttfb is None:
+                ttfb = time.time() - start_time
+            total_bytes += len(data)
+            yield data, time.time() - start_time
+    
+    return ttfb, total_bytes
+```
 
 ### Customizable Bitrate
 
-Neo.One allows you to adjust the bitrate of the audio output, balancing between audio quality and file size. Lower bitrates can reduce transmission time, further minimizing latency.
+neo.one allows you to adjust the bitrate of the audio output, balancing between audio quality and file size. Lower bitrates can reduce transmission time, further minimizing latency.
 
 ### Flexible Audio Formats
 
@@ -85,7 +88,7 @@ Choose from various audio formats to optimize for your specific use case, consid
 
 ## Measuring Performance
 
-To accurately measure Neo.One's performance, we provide a comprehensive testing script that calculates various metrics. You can use this script to replicate our results and test the performance in your own environment.
+To accurately measure neo.one's performance, we provide a comprehensive testing script that calculates various metrics. You can use this script to replicate our results and test the performance in your own environment.
 
 <AccordionGroup>
   <Accordion title="Performance Testing Script">
@@ -172,7 +175,7 @@ To accurately measure Neo.One's performance, we provide a comprehensive testing 
     }
     headers = {"X-API-Key": "YOUR_API_KEY_HERE"}
 
-    print("Testing Neo.One API:")
+    print("Testing neo.one API:")
     results = run_test(url, load, headers, file_name="test.wav")
     for key, value in results.items():
         print(f"{key}: {value}")
@@ -183,7 +186,7 @@ To accurately measure Neo.One's performance, we provide a comprehensive testing 
 To use this script:
 
 1. Replace `'YOUR_API_KEY_HERE'` with your actual API key.
-2. Run the script to test Neo.One's performance.
+2. Run the script to test neo.one's performance.
 3. The script will output various performance metrics, allowing you to compare with our reported averages.
 
 <Note>
@@ -192,7 +195,7 @@ To use this script:
 
 ### Customizable Configuration
 
-Neo.One allows you to adjust various parameters to optimize for your specific use case. In the `load` dictionary of the test script, you can modify:
+neo.one allows you to adjust various parameters to optimize for your specific use case. In the `load` dictionary of the test script, you can modify:
 
 - `text`: The input text for TTS conversion
 - `speaker_no`: The ID of the speaker voice
@@ -212,12 +215,12 @@ Experiment with these parameters to find the optimal configuration for your use 
 
 ## Conclusion
 
-Neo.One offers competitive latency performance comparable to leading neural TTS models. With features like streaming support, customizable configurations, and flexible audio formats, it provides a robust solution for applications requiring responsive and high-quality TTS capabilities.
+neo.one offers competitive latency performance comparable to leading neural TTS models. With features like streaming support, customizable configurations, and flexible audio formats, it provides a robust solution for applications requiring responsive and high-quality TTS capabilities.
 
-For more information on leveraging Neo.One's performance in your projects, refer to our [API documentation](/api-references/text-to-speech) or contact our support team at friends@dubverse.ai for custom integration solutions.
+For more information on leveraging neo.one's performance in your projects, refer to our [API documentation](/api-references/text-to-speech) or contact our support team at friends@dubverse.ai for custom integration solutions.
 
 ## Performance Variations
 
-Please note that the reported performance metrics may vary depending on your current plan and usage. Factors such as server location, network conditions, and concurrent requests can affect actual performance. For the most accurate assessment of Neo.One's performance for your specific use case, we recommend running tests using your own infrastructure and typical workload.
+Please note that the reported performance metrics may vary depending on your current plan and usage. Factors such as server location, network conditions, and concurrent requests can affect actual performance. For the most accurate assessment of neo.one's performance for your specific use case, we recommend running tests using your own infrastructure and typical workload.
 
-If you're experiencing performance issues or need guidance on optimizing Neo.One for your specific needs, please contact our support team at friends@dubverse.ai.
+If you're experiencing performance issues or need guidance on optimizing neo.one for your specific needs, please contact our support team at friends@dubverse.ai.
