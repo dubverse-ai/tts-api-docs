@@ -48,26 +48,31 @@
       "pages": ["introduction", "account-creation", "api-key", "usage-billing"]
     },
     {
-      "group": "Models",
-      "pages": ["models/overview"]
+      "group": "Models & Speakers",
+      "pages": [
+        "models/overview",
+        {
+          "group": "Speakers",
+          "icon": "microphone",
+          "pages": [
+            "speakers/overview",
+            {
+              "group": "neo.one Speakers",
+              "icon": "bolt",
+              "pages": ["speakers/neo-one-speakers"]
+            },
+            {
+              "group": "candy.two Speakers",
+              "icon": "star",
+              "pages": ["speakers/candy-two-speakers"]
+            }
+          ]
+        }
+      ]
     },
     {
       "group": "Evals",
       "pages": ["dubverse-vs-others"]
-    },
-    {
-      "group": "Speakers",
-      "pages": [
-        "speakers/overview",
-        {
-          "group": "neo.one Speakers",
-          "pages": ["speakers/neo-one-speakers"]
-        },
-        {
-          "group": "candy.two Speakers",
-          "pages": ["speakers/candy-two-speakers"]
-        }
-      ]
     },
     {
       "group": "API References",
