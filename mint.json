@@ -60,10 +60,6 @@
       "pages": [
         "speakers/overview",
         {
-          "group": "Best Speakers",
-          "pages": ["speakers/best-speakers"]
-        },
-        {
           "group": "neo.one Speakers",
           "pages": ["speakers/neo-one-speakers"]
         },
@@ -72,6 +68,10 @@
           "pages": ["speakers/candy-two-speakers"]
         }
       ]
+    },
+    {
+      "group": "API References",
+      "pages": ["api-references/text-to-speech"]
     }
   ],
   "openapi": "https://mahatts-assets-new.s3.ap-south-1.amazonaws.com/openapi.json",
