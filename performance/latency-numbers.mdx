@@ -1,0 +1,126 @@
+---
+title: "Neo.One Model Latency Performance"
+description: "An in-depth look at the latency metrics and performance features of Dubverse's Neo.One TTS model"
+---
+
+# Neo.One Model Latency Performance
+
+Dubverse's Neo.One model demonstrates exceptional performance in Text-to-Speech (TTS) generation, offering a balance of speed and quality comparable to industry-leading neural voice models. Here's a detailed breakdown of its latency metrics and key features.
+
+## Understanding TTS Latency
+
+In the context of TTS technology, latency refers to the delay between receiving the input text and generating the audio output. It's crucial to measure and optimize various components of latency for the best user experience.
+
+### Components of Latency
+
+1. **Network Latency**: The time it takes for your request to reach Dubverse's servers.
+2. **Time to First Byte (TTFB)**: The time from initiating the API request to receiving the first byte of audio.
+3. **Audio Synthesis Latency**: The time it takes to generate the complete audio response.
+
+<Warning>
+  The latency for the first couple of requests might be higher due to cold start times. Subsequent requests will typically show improved performance.
+</Warning>
+
+## Neo.One Latency Metrics
+
+### Characters per Second
+- **Neo.One:** 276.13 (average)
+- **Industry Comparison:**
+  - Amazon Polly (Neural): 459
+  - LMNT: 337
+  - Microsoft Azure (Neural): 292
+  - Google Cloud TTS (Studio): 287
+
+While slightly lower than some competitors, Neo.One prioritizes a balance between speed and high-quality output.
+
+### Speed Factor
+- **Neo.One:** 23.80x (average)
+- **Industry Comparison:**
+  - Amazon Polly (Neural): 27.52
+  - LMNT: 20.49
+  - Google Cloud TTS (Studio): 17.23
+  - Microsoft Azure (Neural): 17.02
+
+Neo.One's speed factor is highly competitive, outperforming Microsoft Azure's Neural model and Google's Studio model.
+
+### Time to First Byte (TTFB)
+- **Neo.One:** 193.33 ms (average)
+
+This low TTFB indicates rapid initial response times, crucial for responsive applications.
+
+### Overall Latency
+- **Neo.One:** 695.17 ms (average)
+
+Our overall latency is remarkably low, ensuring quick turnaround for TTS requests.
+
+## Key Features for Optimizing Latency
+
+### Streaming Support
+
+Neo.One supports audio streaming, allowing you to begin playback as soon as the first audio chunk is received. This significantly reduces perceived latency, especially for longer texts.
+
+Example of streaming implementation:
+python
+def get_stream(url, load, headers=None):
+s = requests.Session()
+start_time = time.time()
+ttfb = None
+total_bytes = 0
+with s.post(url, json=load, headers=headers, stream=True) as resp:
+for data in resp.iter_content(chunk_size=10248):
+if ttfb is None:
+ttfb = time.time() - start_time
+total_bytes += len(data)
+yield data, time.time() - start_time
+return ttfb, total_bytes
+
+### Customizable Bitrate
+
+Neo.One allows you to adjust the bitrate of the audio output, balancing between audio quality and file size. Lower bitrates can reduce transmission time, further minimizing latency.
+
+### Flexible Audio Formats
+
+Choose from various audio formats to optimize for your specific use case, considering factors like quality, file size, and compatibility.
+
+## Measuring Performance
+
+To accurately measure Neo.One's performance, we use a comprehensive testing script that calculates various metrics:
+
+### Customizable Configuration
+python
+def run_test(url, load, headers=None, file_name="test.wav"):
+# ... (implementation details)
+return {
+"TTFB": f"{ttfb 1000:.2f} ms",
+"Overall Latency": f"{overall_latency:.2f} ms",
+"Speed Factor": f"{speed_factor:.2f}x",
+"Characters per second": f"{chars_per_second:.2f}",
+"Total Data Received": f"{file_size / 1024:.2f} KB",
+"Audio Duration": f"{audio_duration:.2f} seconds",
+"Sample Width": f"{sample_width 8} bits",
+"Frame Rate": f"{frame_rate} Hz"
+}
+
+Neo.One allows you to adjust various parameters to optimize for your specific use case:
+
+## Tips for Minimizing Latency
+
+1. **Text Chunking**: For long texts, split content into smaller chunks and process them sequentially. This allows for faster initial playback.
+
+2. **Optimize Server Location**: Choose the server closest to your primary user base to reduce network latency.
+
+3. **Caching**: Implement caching strategies for frequently used phrases or responses to eliminate processing time for repeated content.
+
+4. **Parallel Processing**: For applications requiring multiple TTS conversions, consider implementing parallel API calls to reduce overall processing time.
+
+## Conclusion
+
+Neo.One offers competitive latency performance comparable to leading neural TTS models. With features like streaming support, customizable configurations, and flexible audio formats, it provides a robust solution for applications requiring responsive and high-quality TTS capabilities.
+
+For more information on leveraging Neo.One's performance in your projects, refer to our [API documentation](/api-references/text-to-speech) or contact our support team at friends@dubverse.ai for custom integration solutions.
+
+## Performance Variations
+
+Please note that the reported performance metrics may vary depending on your current plan and usage. Factors such as server location, network conditions, and concurrent requests can affect actual performance. For the most accurate assessment of Neo.One's performance for your specific use case, we recommend running tests using your own infrastructure and typical workload.
+
+If you're experiencing performance issues or need guidance on optimizing Neo.One for your specific needs, please contact our support team at friends@dubverse.ai.

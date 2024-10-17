@@ -73,9 +73,9 @@
       ]
     },
     {
-      "group": "Evals",
+      "group": "Performance",
       "icon": "chart-bar",
-      "pages": ["dubverse-vs-others"]
+      "pages": ["performance/dubverse-vs-others", "performance/latency-numbers"]
     },
     {
       "group": "API References",
