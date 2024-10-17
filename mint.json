@@ -52,11 +52,7 @@
       "group": "Models & Speakers",
       "icon": "microphone-stand",
       "pages": [
-        {
-          "group": "Models",
-          "icon": "cube",
-          "pages": ["models/overview"]
-        },
+        "models/overview",
         {
           "group": "Speakers",
           "icon": "microphone",
