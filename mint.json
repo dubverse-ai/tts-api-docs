@@ -58,6 +58,24 @@
     {
       "group": "Features",
       "pages": ["speaker-list", "dubverse-vs-others"]
+    },
+    {
+      "group": "Speakers",
+      "pages": [
+        "speakers/overview",
+        {
+          "group": "Best Speakers",
+          "pages": ["speakers/best-speakers"]
+        },
+        {
+          "group": "neo.one Speakers",
+          "pages": ["speakers/neo-one-speakers"]
+        },
+        {
+          "group": "candy.two Speakers",
+          "pages": ["speakers/candy-two-speakers"]
+        }
+      ]
     }
   ],
   "footerSocials": {
