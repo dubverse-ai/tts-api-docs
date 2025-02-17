@@ -78,6 +78,61 @@ import { EnglishAudioComparison } from "/snippets/englishAudioComparison.mdx";
 
 7. **Versatility**: From simple greetings to complex tongue-twisters, Dubverse consistently delivers high-quality speech synthesis.
 
+## Open Source Models
+
+### Zonos
+
+[Zonos](https://github.com/Zyphra/Zonos) is an open-weight text-to-speech model trained on over 200k hours of multilingual speech data. While it shows promising capabilities, our evaluation reveals some important limitations to consider before production use.
+
+#### Key Features
+- Zero-shot voice cloning with 10-30s speaker samples
+- Multilingual support (English, Japanese, Chinese, French, German)
+- Fine-grained control over speaking rate, pitch, audio quality and emotions
+- Real-time factor of ~2x on RTX 4090
+
+#### Evaluation Results
+
+Our testing revealed several areas that need improvement before production deployment:
+
+1. **Audio Quality**
+- Inconsistent speaker stability with occasional hallucinations
+- Voice characteristics sometimes drift during longer utterances
+- Generation errors can cause interruptions in output
+
+2. **Expressiveness**
+- While capable of emotional speech, results are inconsistent
+- American male samples showed unintended "happy, chirpy tone"
+- Faster speaking pace than intended in some dialogues
+
+3. **Hallucination Issues**
+- More prevalent in American male speaker compared to other voices
+- Can manifest as unexpected voice changes mid-speech
+- Affects overall reliability of the output
+
+[Listen to sample](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/zyphra_zonos/american+male+.wav)
+
+While Zonos demonstrates impressive capabilities for an open source model, these limitations make it better suited for experimental use rather than production applications where consistent, reliable output is critical.
+
+#### Audio Samples
+
+**Good Narration Examples**
+- [Female Voice Narration](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/zyphra_zonos/Good+narration+style+in+female+voice.wav)
+- [Calm Voice Narration](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/zyphra_zonos/Good+narration+style+in+calm+voice.wav)
+
+**Quality Issues**
+- [Wrong Tonality](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/zyphra_zonos/wrong+tonality.wav)
+- [Robotic Sound](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/zyphra_zonos/robotic+sound1.wav)
+
+**Hallucination Examples**
+- [Hallucination 1](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/zyphra_zonos/Hallucination+1.wav)
+- [Hallucination 2](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/zyphra_zonos/Hallucination+2.wav)
+- [Hallucination 3](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/zyphra_zonos/hallucination+3.wav)
+- [Hallucination 3 (with male voice)](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/zyphra_zonos/hallucination+3+(male+voice+added+).wav)
+- [Hallucination 4](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/zyphra_zonos/hallucination+4.wav)
+
+**Voice Samples**
+- [American Male](https://dubverse-webapp.s3.ap-south-1.amazonaws.com/speaker_comparison/zyphra_zonos/american+male+.wav)
+
 ## Conclusion
 
 Dubverse's candy.two model stands out as a superior choice for text-to-speech needs, especially for projects requiring high-quality Hindi and English voice synthesis. With its natural-sounding speech, consistent performance across languages, and ability to handle complex sentences, candy.two offers a robust solution that outperforms many established competitors in the market. For more details on candy.two and our other TTS models, check out our [Models Overview](/models/overview#candy-two-model).
