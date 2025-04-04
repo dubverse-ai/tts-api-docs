@@ -51,7 +51,10 @@ Before you begin, ensure you have:
       Set to `true` for streamed audio, `false` for a complete audio file response.
     </ParamField>
     <ParamField body="sample_rate" type="number" default="22050">
-      Audio sample rate in Hz. Accepts values between 8000 and 48000.
+      Audio sample rate in Hz. Accepts values between 8000 and 48000. Only supported by 'neo.one' speakers.
+    </ParamField>
+    <ParamField body="instructions" type="string">
+      Optional instructions to guide voice generation. Only supported for 'Mermish' speakers.
     </ParamField>
   </Expandable>
 </ParamField>
